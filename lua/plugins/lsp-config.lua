@@ -28,9 +28,6 @@ return {
       lspconfig.svelte.setup({
         capabilities = capabilities,
       })
-      lspconfig.angularls.setup({
-        capabilities = capabilities,
-      })
       lspconfig.tsserver.setup({
         capabilities = capabilities,
       })
