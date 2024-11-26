@@ -8,7 +8,7 @@ return {
 		null_ls.setup({
 			sources = {
         null_ls.builtins.formatting.prettier.with({
-          filetypes = { "svelte","html", "json", "yaml", "markdown", "css", "scss", "javascript", "typescript" },
+          filetypes = { "svelte","html", "json", "yaml", "markdown", "css", "scss", "javascript", "typescript", "angular" },
         }),
         require("none-ls.formatting.eslint_d"),
         require("none-ls.code_actions.eslint_d"),
