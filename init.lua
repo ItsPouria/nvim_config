@@ -10,7 +10,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-vim.opt.number = true
+vim.opt.relativenumber = true
 vim.g.editorconfig = false
 
 local opts = {}
