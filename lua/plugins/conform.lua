@@ -5,35 +5,30 @@ return {
 		local conform = require("conform")
 
 		conform.setup({
+			log_level = vim.log.levels.DEBUG,
 			formatters_by_ft = {
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				svelte = { "prettier" },
-				css = { "prettier" },
-				html = { "prettier" },
-				json = { "prettier" },
-				yaml = { "prettier" },
-				markdown = { "prettier" },
-				graphql = { "prettier" },
-				liquid = { "prettier" },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				svelte = { "prettierd" },
+				css = { "prettierd" },
+				html = { "prettierd" },
+				json = { "prettierd" },
+				yaml = { "yamlfmt", "prettierd" },
+				markdown = { "prettierd" },
 				lua = { "stylua" },
-				python = { "isort", "black" },
+				htmlangular = { "prettierd" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 1000,
 			},
 		})
 
-		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+		vim.keymap.set({ "n", "v" }, "<leader>gf", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 1000,
 			})
-		end, { desc = "Format file or range (in visual mode)" })
+		end, { desc = "Format file or rage (in visual mode)" })
 	end,
 }
