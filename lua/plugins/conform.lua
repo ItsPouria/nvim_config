@@ -17,6 +17,7 @@ return {
 				markdown = { "prettierd" },
 				lua = { "stylua" },
 				htmlangular = { "prettierd" },
+				rust = { "rustfmt", lsp_fallback = "fallback" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

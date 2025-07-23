@@ -49,6 +49,7 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			local mason_tool_installer = require("mason-tool-installer")
+			vim.diagnostic.config({ virtual_text = true })
 
 			mason_tool_installer.setup({
 				ensure_installed = {
